@@ -4,9 +4,10 @@ This training was tested on an AWS EC2 **g4dn.4xlarge** instance (T4 GPU).
 
 ## Setup
 
+1. Launch **g4dn.4xlarge** EC2 instance in any region.
 When creating the instance, use the Deep Learning AMI (Ubuntu 20.04) and make sure to allow ports 22 and 8888.
 
-SSH into your EC2 instance using your key-pair. Create a key-pair if you don't have one.
+2. SSH into your EC2 instance using your key-pair. Create a key-pair if you don't have one.
 ```bash
 ssh -i <your pem key> ubuntu@<Your DNS name>
 ```
