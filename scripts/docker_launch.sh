@@ -20,9 +20,8 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 
-docker run --rm -it \
+docker run --runtime nvidia --rm -it \
     --name deepstream-training_session2 \
-    --net nvidia \
     -p 8888:8888 \
     -v /home/ubuntu/deepstream-training:/opt/nvidia/workshop \
     --network host \
