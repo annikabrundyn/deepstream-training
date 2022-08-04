@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright (c) 2020, NVIDIA CORPORATION. All rights reserved.
+# Copyright (c) 2022, NVIDIA CORPORATION. All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -20,11 +20,10 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 
-docker run --runtime nvidia --rm -it -d \
-    -w /opt/nvidia \
+docker run --rm -it \
+    --name deepstream-training_session2 \
+    -p 8888:8888 \
+    -v /home/ubuntu/deepstream-training:/workspace/deepstream-training \
+    -w /workspace/deepstream-training \
     --network host \
-    --name aws-iot-workshop_session2 \
-    -v /tmp/.X11-unix/:/tmp/.X11-unix \
-    -v ${1:-"$HOME/aws-training/notebooks/"}:/opt/nvidia/workshop/notebooks \
-    -v $HOME/ds-peoplecounter-l4v-workshop/:/opt/nvidia/ggv2 \
-    aws-iot-training:session2-feb22
+    deepstream-training:session2
