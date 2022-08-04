@@ -23,7 +23,6 @@
 docker run --rm -it \
     --name deepstream-training_session2 \
     -p 8888:8888 \
-    -v /home/ubuntu/deepstream-training:/workspace/deepstream-training \
-    -w /workspace/deepstream-training \
+    -v /home/ubuntu/deepstream-training:/opt/nvidia/workshop \
     --network host \
     deepstream-training:session2
