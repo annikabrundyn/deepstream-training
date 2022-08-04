@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright (c) 2020, NVIDIA CORPORATION. All rights reserved.
+# Copyright (c) 2022, NVIDIA CORPORATION. All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -20,6 +20,6 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 
-echo "Building aws-iot-training:session2-feb22 container..."
+echo "Building deepstream-training:session2 container..."
 
-docker build -t aws-iot-training:session2-feb22 -f Dockerfile .
+docker build -t deepstream-training:session2 -f Dockerfile .
